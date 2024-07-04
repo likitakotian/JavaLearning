@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChatHistory">
+    <chats>
+      <list>
+        <chat>
+          <accountId value="VXNlcjozMzEzMjY=" />
+          <internalId value="e5728973-f1ee-43f1-9ec1-1a77bed50ff0" />
+          <messages>
+            <list>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="  System.out.println(findTwoSum([2,7,11,15],9)); whats wrong" />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+              </message>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="package weekonesequences;&#10;&#10;public class TwoSum {&#10;    public static void main(String[] args) {&#10;        System.out.println(findTwoSum([2,7,11,15],9));&#10;    }&#10;&#10;    public static String findTwoSum(int[] nums, int target){&#10;        for( int i=0;i&lt;nums.length; i++){&#10;            if((target - nums[i+1])== nums[i]){&#10;                return   (&quot;[&quot;+i +&quot;,&quot; + (i+1)+&quot;]&quot;);&#10;            }&#10;        }&#10;        return null;&#10;    }&#10;}&#10;whast wrong" />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+              </message>
+            </list>
+          </messages>
+          <updatedAt value="2024-06-03T11:57:48.91672" />
+        </chat>
+      </list>
+    </chats>
+  </component>
+</project>
