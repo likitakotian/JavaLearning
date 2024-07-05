@@ -1,8 +1,11 @@
 package streams.flatmap;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FlatMapDemo1 {
     public static void main(String[] args) {
@@ -20,6 +23,21 @@ public class FlatMapDemo1 {
         System.out.println("finalList--->"+finalList);
         List<Integer> result= finalList.stream().flatMap(n->n.stream().map(x->x*2)).collect(Collectors.toList());
         System.out.println("result--->"+result);
+
+
+        List<Character> charList = Arrays.asList('A', 'B', 'C');
+        List<Integer> intList = Arrays.asList(1, 2, 3);
+
+        List<Object> combinedList = Arrays.asList(charList, intList);
+        List<Object> nums = Stream.of(charList, intList).flatMap( it -> it.stream().map(obj -> {if (obj instanceof Character) {
+            return (int) (Character) obj;
+        } else if (obj instanceof Integer) {
+            return (Integer) obj;
+        } else {
+            throw new IllegalArgumentException("Unsupported type: " + obj.getClass().getName());
+        }})).collect(Collectors.toList());
+        System.out.println(nums);
+
 
     }
 }
